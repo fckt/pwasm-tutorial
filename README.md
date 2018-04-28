@@ -19,7 +19,7 @@ rustup target add wasm32-unknown-unknown
 cargo install pwasm-utils
 ```
 
-One should then run `wasm-build` agains plain Cargo-generated `.wasm` artifact (`target/wasm32-unknown-unknown/release/pwasm_tutorial_contract.wasm`) to trim and optimise it for blockchain usage.
+One should then run `wasm-build` against plain Cargo-generated `.wasm` artifact (`target/wasm32-unknown-unknown/release/pwasm_tutorial_contract.wasm`) to trim and optimise it for blockchain usage.
 That is done with a single command `wasm-build --target=wasm32-unknown-unknown ./target pwasm_tutorial_contract` (it assumes the proper subfolder structure of Cargo's `target` folder automatically); that invocation results in a `target/pwasm_tutorial_contract.wasm` blockchain-ready bytecode being produced.
 
 For your convenience, every step in our tutorial features a `build.sh` shell script, which incorporates the proper `wasm-build` call (unfortunately, cargo's build pipeline is not yet extensible enough to feature such steps automatically). Alternatively, one can trivially call the same wasm packing manually after every build.
@@ -195,7 +195,7 @@ pub trait TokenInterface {
 
 We've added a second argument `TokenClient` to the `eth_abi` macro as a second argument (it is optional) -- this way we ask to generate a _client_ implementation for `TokenInterface` trait and name it as `TokenClient`.
 First one requests the name for the Endpoint implementation, which is used internally in the contract to hide away dispatching of the interface methods, turning Ethereum ABI-encoded payloads into calls to the corresponding `TokenContract` methods with deserialized params.
-Client, created via the second argeument, is doing the opposite, providing a Rust wrapper for Ethereum ABI-compatible calls to any interface-compatible contract on chain.
+Client, created via the second argument, is doing the opposite, providing a Rust wrapper for Ethereum ABI-compatible calls to any interface-compatible contract on chain.
 
 Let's suppose we've deployed a token contract on `0x7BA4324585CB5597adC283024819254345CD7C62` address. That's how we can make calls to it.
 
