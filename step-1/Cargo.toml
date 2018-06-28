@@ -4,8 +4,8 @@ version = "0.1.0"
 authors = ["Alexey Frolov <alexey@parity.io>"]
 
 [dependencies]
-pwasm-std = "0.7"
-pwasm-ethereum = "0.4"
+pwasm-std = "0.9.0"
+pwasm-ethereum = "0.5.1"
 
 [dependencies.parity-hash]
 version = "1"
