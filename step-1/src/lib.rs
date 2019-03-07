@@ -11,7 +11,7 @@ use pwasm_std::types::H256;
 pub fn deploy() {
     // Lets set the sender address to the contract storage at address "0"
     pwasm_ethereum::write(&H256::zero().into(), &H256::from(pwasm_ethereum::sender()).into());
-    // Note we should't write any result into the call descriptor in deploy.
+    // Note we shouldn't write any result into the call descriptor in deploy.
 }
 
 // The following code will be stored on the blockchain.

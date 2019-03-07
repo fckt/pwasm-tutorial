@@ -84,9 +84,9 @@ When deploying a contract we often want to set its initial storage values (e.g. 
 #![no_std]
 
 extern crate pwasm_ethereum;
-extern crate parity_hash;
+extern crate pwasm_std;
 
-use parity_hash::H256;
+use pwasm_std::types::H256;
 
 // The "deploy" will be executed only once on deployment but will not be stored on the blockchain
 #[no_mangle]
