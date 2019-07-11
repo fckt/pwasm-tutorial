@@ -14,9 +14,9 @@ rustup target add wasm32-unknown-unknown
 ```
 
 ### Parity wasm-build
-[wasm-build](https://github.com/paritytech/wasm-utils#build-tools-for-cargo) takes the raw `.wasm` file produced by Rust compiler and packs it to the form of valid contract.
+[wasm-build](https://github.com/paritytech/wasm-utils#build-tools-for-cargo) takes the raw `.wasm` file produced by Rust compiler and packs it to the form of valid contract. You will need version `0.6.0` for this tutorial to work.
 ```
-cargo install pwasm-utils-cli --bin wasm-build
+cargo install pwasm-utils-cli --version 0.6.0 --bin wasm-build
 ```
 
 ### Parity

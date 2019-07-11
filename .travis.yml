@@ -4,7 +4,7 @@ rust:
   - nightly
 before_install:
   - rustup target add wasm32-unknown-unknown
-  - command -v wasm-build || cargo install pwasm-utils-cli --bin wasm-build
+  - command -v wasm-build || cargo install pwasm-utils-cli --version 0.6.0 --bin wasm-build
   - ./wasm-install.sh
 env:
   - TUTOR_DIR=step-0
